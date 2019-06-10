@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="lwtk,lwtk's blog,lwtk的博客" />
   
-  <meta name="description" content="总结：阻抗匹配在低频电路中的对于低频电路不太重要，意味着负载从电源获得的功率最大；在高频电路中可以避免反射波的存在。值得注意的是，高频电路中，传输线上的电压和电流是以波的形式存在的，所谓的传输线特性阻抗，不是指简单的阻抗值，而是行波电压与行波电流的比值，具有阻抗的量纲。举个例子，传输线的特性阻抗为50Ω，如果负载的阻抗也是50Ω的话，从传输线上任意一点向负载方向看去的阻抗（输入阻抗）都等于特性阻">
+  <meta name="description" content="总结：阻抗匹配对于低频电路不太重要，意味着负载从电源获得的功率最大；在高频电路中可以避免反射波的存在。值得注意的是，高频电路中，传输线上的电压和电流是以波的形式存在的（波的自变量是传输线上的位置x），所谓的传输线特性阻抗，不是指简单的阻抗值，而是行波电压与行波电流的比值，具有阻抗的量纲。举个例子，传输线的特性阻抗为50Ω，如果负载的阻抗也是50Ω的话，从传输线上任意一点向负载方向看去的阻抗（输入">
 <meta name="keywords" content="思考,积累">
 <meta property="og:type" content="article">
 <meta property="og:title" content="阻抗匹配基础">
 <meta property="og:url" content="https://lovelwtk.github.io/2019/06/10/2019-06-10-阻抗匹配/index.html">
 <meta property="og:site_name" content="lwtk的博客">
-<meta property="og:description" content="总结：阻抗匹配在低频电路中的对于低频电路不太重要，意味着负载从电源获得的功率最大；在高频电路中可以避免反射波的存在。值得注意的是，高频电路中，传输线上的电压和电流是以波的形式存在的，所谓的传输线特性阻抗，不是指简单的阻抗值，而是行波电压与行波电流的比值，具有阻抗的量纲。举个例子，传输线的特性阻抗为50Ω，如果负载的阻抗也是50Ω的话，从传输线上任意一点向负载方向看去的阻抗（输入阻抗）都等于特性阻">
+<meta property="og:description" content="总结：阻抗匹配对于低频电路不太重要，意味着负载从电源获得的功率最大；在高频电路中可以避免反射波的存在。值得注意的是，高频电路中，传输线上的电压和电流是以波的形式存在的（波的自变量是传输线上的位置x），所谓的传输线特性阻抗，不是指简单的阻抗值，而是行波电压与行波电流的比值，具有阻抗的量纲。举个例子，传输线的特性阻抗为50Ω，如果负载的阻抗也是50Ω的话，从传输线上任意一点向负载方向看去的阻抗（输入">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-10T11:21:29.741Z">
+<meta property="og:updated_time" content="2019-06-10T12:02:04.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阻抗匹配基础">
-<meta name="twitter:description" content="总结：阻抗匹配在低频电路中的对于低频电路不太重要，意味着负载从电源获得的功率最大；在高频电路中可以避免反射波的存在。值得注意的是，高频电路中，传输线上的电压和电流是以波的形式存在的，所谓的传输线特性阻抗，不是指简单的阻抗值，而是行波电压与行波电流的比值，具有阻抗的量纲。举个例子，传输线的特性阻抗为50Ω，如果负载的阻抗也是50Ω的话，从传输线上任意一点向负载方向看去的阻抗（输入阻抗）都等于特性阻">
+<meta name="twitter:description" content="总结：阻抗匹配对于低频电路不太重要，意味着负载从电源获得的功率最大；在高频电路中可以避免反射波的存在。值得注意的是，高频电路中，传输线上的电压和电流是以波的形式存在的（波的自变量是传输线上的位置x），所谓的传输线特性阻抗，不是指简单的阻抗值，而是行波电压与行波电流的比值，具有阻抗的量纲。举个例子，传输线的特性阻抗为50Ω，如果负载的阻抗也是50Ω的话，从传输线上任意一点向负载方向看去的阻抗（输入">
   
   
     <link rel="icon" href="/logo.ico">
@@ -169,15 +169,15 @@ ga('send', 'pageview');
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <script src="\assets\js\APlayer.min.js"> </script><p>总结：阻抗匹配在低频电路中的对于低频电路不太重要，意味着负载从电源获得的功率最大；在高频电路中可以避免反射波的存在。值得注意的是，高频电路中，传输线上的电压和电流是以波的形式存在的，所谓的传输线特性阻抗，不是指简单的阻抗值，而是行波电压与行波电流的比值，具有阻抗的量纲。举个例子，传输线的特性阻抗为50Ω，如果负载的阻抗也是50Ω的话，从传输线上任意一点向负载方向看去的阻抗（输入阻抗）都等于特性阻抗—50Ω（处处50Ω，不是总共50Ω！！！）。此时不是简单的传输线50Ω+负载50Ω=100Ω。。。。</p>
+            <script src="\assets\js\APlayer.min.js"> </script><p>总结：阻抗匹配对于低频电路不太重要，意味着负载从电源获得的功率最大；在高频电路中可以避免反射波的存在。值得注意的是，高频电路中，传输线上的电压和电流是以波的形式存在的（波的自变量是传输线上的位置x），所谓的传输线特性阻抗，不是指简单的阻抗值，而是行波电压与行波电流的比值，具有阻抗的量纲。举个例子，传输线的特性阻抗为50Ω，如果负载的阻抗也是50Ω的话，从传输线上任意一点向负载方向看去的阻抗（输入阻抗）都等于特性阻抗—50Ω（处处50Ω，不是总共50Ω！！！）。此时不是简单的传输线50Ω+负载50Ω=100Ω。。。。</p>
 <ul>
-<li><a href="https://blog.csdn.net/jamestaosh/article/details/4436203" target="_blank" rel="noopener">阻抗匹配基础</a></li>
+<li><a href="https://blog.csdn.net/krain__/article/details/79961518" target="_blank" rel="noopener">阻抗匹配基础</a></li>
 <li><a href="http://www.360doc.com/content/16/0610/15/32066980_566502324.shtml" target="_blank" rel="noopener">史密斯圆图：读懂反射系数</a></li>
 </ul>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年06月10日 19:21</p>
+        <p>最后更新： 2019年06月10日 20:02</p>
         <p>原始链接： <a class="post-url" href="/2019/06/10/2019-06-10-阻抗匹配/" title="阻抗匹配基础">https://lovelwtk.github.io/2019/06/10/2019-06-10-阻抗匹配/</a></p>
         <footer>
             <a href="https://lovelwtk.github.io">
